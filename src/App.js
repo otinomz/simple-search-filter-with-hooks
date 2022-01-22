@@ -17,7 +17,6 @@ export default function App({ items }) {
   return (
     <>
       <h1>React Simple Search filter using hooks</h1>
-
       <input placeholder="search word from the list" onChange={filterItems} />
 
       {/* trying to map over dummy text data for sample case */}
