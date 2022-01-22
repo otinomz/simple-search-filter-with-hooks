@@ -10,6 +10,8 @@ export default function App({ items }) {
     const matchingItems = currentItems.filter((item) =>
       item.startsWith(searchValue)
     );
+
+    setFilteredItems(matchingItems);
   };
 
   return (
