@@ -1,7 +1,7 @@
 import "./styles.css";
 import React, { useState } from "react";
 
-export default function List({ items }) {
+export default function App({ items }) {
   const [filteredItems, setFilteredItems] = useState(items);
 
   const filterItems = (e) => {
@@ -35,6 +35,6 @@ export default function List({ items }) {
   );
 }
 
-export const ListContainer = () => (
-  <List items={["Learn React", "Learn Nextjs", "Learn Typescript"]} />
+export const ApptContainer = () => (
+  <App items={["Learn React", "Learn Nextjs", "Learn Typescript"]} />
 );
