@@ -19,6 +19,13 @@ export default function App({ items }) {
       <h1>React Simple Search filter using hooks</h1>
 
       <input onChange={filteredItems} />
+
+      {/* trying to map over dummy text data for sample case */}
+      <ul>
+        {filterItems.map((item) => (
+          <li key={item}> {item}</li>
+        ))}
+      </ul>
     </div>
   );
 }
