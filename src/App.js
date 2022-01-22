@@ -1,7 +1,7 @@
 import "./styles.css";
 import React, { useState } from "react";
 
-export default function App({ items }) {
+export default function App({ items, ...props }) {
   const [filteredItemss, setFilteredItems] = useState(items);
 
   const filterItems = (e) => {
