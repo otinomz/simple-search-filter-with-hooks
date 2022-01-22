@@ -1,7 +1,7 @@
 import "./styles.css";
 import React from "react";
 
-export default function App({ items }) {
+export default function List({ items }) {
   const [filteredItems, setFilteredItems] = React.useState(items);
 
   const filterItems = (e) => {
@@ -15,10 +15,10 @@ export default function App({ items }) {
   };
 
   return (
-    <div className="App">
+    <>
       <h1>React Simple Search filter using hooks</h1>
 
-      <input onChange={filterItems} />
+      <input placeholder="search word from the list" onChange={filterItems} />
 
       {/* trying to map over dummy text data for sample case */}
       <ul>
@@ -26,6 +26,10 @@ export default function App({ items }) {
           <li key={item}> {item}</li>
         ))}
       </ul>
-    </div>
+    </>
   );
 }
+
+export const ListContainer = () => (
+  <List items={["Learn React", "Learn Nextjs", "Learn Typescript"]} />
+);
