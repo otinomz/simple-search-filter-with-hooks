@@ -2,7 +2,7 @@ import "./styles.css";
 import React, { useState } from "react";
 
 export default function App({ items }) {
-  const [filteredItems, setFilteredItems] = useState(items);
+  const [filteredItemss, setFilteredItems] = useState(items);
 
   const filterItems = (e) => {
     const searchValue = e.target.value;
@@ -21,13 +21,8 @@ export default function App({ items }) {
       <input placeholder="search word from the list" onChange={filterItems} />
 
       {/* trying to map over dummy text data for sample case */}
-      {/* <ul>
-        { filteredItems.((item) => (
-          <li key={item}> {item}</li>
-        ))}
-      </ul> */}
       <ul>
-        {filteredItems.map((item) => {
+        {filteredItemss.map((item) => {
           return <li>{item}</li>;
         })}
       </ul>
