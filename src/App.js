@@ -4,6 +4,14 @@ import React from "react";
 export default function App({ items }) {
   const [filteredItems, setFilteredItems] = React.useState(items);
 
+  const filterItems = (e) => {
+    const searchValue = e.target.value;
+    const currentItems = [...items];
+    const matchingItems = currentItems.filter((item) =>
+      item.startsWith(searchValue)
+    );
+  };
+
   return (
     <div className="App">
       <h1>React Simple Search filter using hooks</h1>
